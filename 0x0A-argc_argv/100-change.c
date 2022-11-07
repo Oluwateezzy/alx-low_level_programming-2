@@ -7,10 +7,37 @@
 /**
  * coinConverter - Helper function that does all the mathematics
  * @i: Passed in variable from main for calculations
- * Return: count (it will return the coin count)
+ * Return: The number of coins needed minimum for the passed in variable
  */
+int coinConverter(int i)
+{
+	int count = 0;
 
-int coinConverter(int i);
+	while (i != 0)
+	{
+		if (i % 10 == 9 || i % 10 == 7)
+			i -= 2;
+		else if (i % 25 == 0)
+			i -= 25;
+		else if (i % 10 == 0)
+			i -= 10;
+		else if (i % 5 == 0)
+			i -= 5;
+			else if (i % 2 == 0)
+		{
+			if (i % 10 == 6)
+				i -= 1;
+			else
+				i -= 2;
+		}
+		else
+			i -= 1;
+
+		count++;
+	}
+
+	return (count);
+}
 
 /**
  * main - Takes in exactly one argument for minimum coin count
@@ -43,39 +70,4 @@ int main(int argc, char *argv[])
 	}
 
 	return (0);
-}
-
-/**
- * coinConverter - Helper function that does all the mathematics
- * @i: Passed in variable from main for calculations
- * Return: The number of coins needed minimum for the passed in variable
- */
-int coinConverter(int i)
-{
-	int count = 0;
-
-	while (i != 0)
-	{
-		if (i % 10 == 9 || i % 10 == 7)
-			i -= 2;
-		else if (i % 25 == 0)
-			i -= 25;
-		else if (i % 10 == 0)
-			i -= 10;
-		else if (i % 5 == 0)
-			i -= 5;
-			else if (i % 2 == 0)
-		{
-			if (i % 10 == 6)
-				i -= 1;
-			else
-				i -= 2;
-		}
-		else
-			i -= 1;
-
-		count++;
-	}
-
-	return (count);
 }
