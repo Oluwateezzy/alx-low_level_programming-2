@@ -10,7 +10,7 @@
  * Return: The number of coins needed minimum for the passed in variable
  */
 
-int coinConverter(int i)
+int coinConverter(int i);
 
 /**
  * main - Takes in exactly one argument for minimum coin count
