@@ -7,6 +7,7 @@
 /**
  * coinConverter - Helper function that does all the mathematics
  * @i: Passed in variable from main for calculations
+ * Return: count (it will return the coin count)
  */
 
 int coinConverter(int i);
