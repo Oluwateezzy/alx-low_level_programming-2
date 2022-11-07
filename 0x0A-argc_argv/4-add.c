@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 /**
  * checker - checks for valid input
  * @argc: argument count
